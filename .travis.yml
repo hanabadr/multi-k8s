@@ -17,7 +17,7 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker build -t hanaabadr/react-test -f ./client/Dockerfile.dev ./client
 script:
-  - docker run -e CI=true hanabadr/react-test npm test
+  - docker run -e CI=true hanaabadr/react-test npm test
 deploy:
   provider: script
   script: bash ./deploy.sh
