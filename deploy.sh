@@ -1,6 +1,6 @@
 docker build -t hanaabadr/multi-client:latest -t hanaabadr/multi-client:$SHA -f ./client/Dockerfile ./client
-docker build -t hanaabadr/multi-server:latest -t hanaabadr/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t hanaabadr/multi-worker:latest -t hanaabadr/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t hanaabadr/multi-server:latest -t hanaabadr/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t hanaabadr/multi-worker:latest -t hanaabadr/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push hanaabadr/multi-client:latest
 docker push hanaabadr/multi-server:latest 
